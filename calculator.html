@@ -1,0 +1,93 @@
+
+<!DOCTYPE html>
+<html lang="en"><!-- InstanceBegin template="/Templates/template.dwt" codeOutsideHTMLIsLocked="false" -->
+<head>
+<!-- InstanceBeginEditable name="doctitle" -->
+<title>Calculator</title>
+<!-- InstanceEndEditable -->
+<meta charset="utf-8" />
+	
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script src="js/konami.js"></script>
+<script>var easter_egg = new Konami(function() { alert('Konami code!')});</script>
+<script src="js/dropdown.js"></script>
+<link href="css/style.css" rel="stylesheet" type="text/css">
+	<!-- InstanceBeginEditable name="head" -->
+    <script type="text/javascript" src="js/damageResistanceCalc.js"></script>
+	<!-- InstanceEndEditable -->
+
+</head>
+
+<body class="body">
+	
+	<header class="mainHeader">
+		<div class="headerBackground">
+		  <div align="center">
+          <img class="dirt" src="img/500px-Minecraft_dirt_block_hd_by_benderxable-d4wbq8w.png" width="100" height="100">
+          <img class="logo" src="img/Minecraft.gif">
+          <img class="dirt" src="img/500px-Minecraft_dirt_block_hd_by_benderxable-d4wbq8w.png" width="22%" height="134"></div>
+            
+		</div>
+		<nav><ul>
+			<li><a href="index.html" class="active">Home</a></li>
+        	<li><a href="information.html" onmouseover="mopen('m1')" onmouseout="mclosetime()">Information</a>
+        		<div id="m1" onmouseover="mcancelclosetime()" onmouseout="mclosetime()">
+        			<a href="techniques.html">Tips and Techniques</a>
+        			<a href="types-of-servers.html">Types of Servers</a>
+        		</div>
+            </li>
+  			<li><a href="calculator.html">Calculator</a></li>
+       	  <li><a href="reference.html">References</a></li>
+		</ul></nav>
+	</header>
+	<!-- InstanceBeginEditable name="mainContent" -->
+	<div class="mainContent">
+	  <div class="content">
+	    <article class="topcontent">
+	          <h1>Damage Resistance Calculator</h1>
+    <!--<p ><select id="swordType" onChange="swordDamage(this.options[this.selectedIndex].value)">
+        <option value="0" selected="selected">Select Sword Type</option>
+  		<option value="5">Wooden</option>
+  		<option value="5">Gold</option>
+  		<option value="6">Stone</option>
+  		<option value="7">Iron</option>
+    	<option value="8">Diamond</option>
+	</select></p>-->
+    <p>
+    <select id="armorType" onChange="reducedDamageArmor(this.options[this.selectedIndex].value)">
+        <option value="0" selected="selected">Select Armour Type</option>
+  		<option value="7">Leather</option>
+  		<option value="11">Gold</option>
+  		<option value="12">Chainmail</option>
+  		<option value="15">Iron</option>
+    	<option value="20">Diamond</option>
+	</select></p>
+    <p>
+    <select id="protectionValue" onChange="reducedDamageEnchantment(this.options[this.selectedIndex].value)">
+        <option value="0" selected="selected">Select Protection Amount</option>
+  		<option value="4">Protection 1</option>
+  		<option value="8">Protection 2</option>
+  		<option value="12">Protection 3</option>
+  		<option value="20">Protection 4</option>
+    	<option value="25">Protection 10</option>
+	</select>
+    <button type="button" onClick="reducedDamageEnchantment(document.getElementById('protectionValue').options[document.getElementById('protectionValue').selectedIndex].value)">Click to refresh Protection value </button>
+    <button type="button" onClick="minReducedDamageEnchantment(document.getElementById('protectionValue').options[document.getElementById('protectionValue').selectedIndex].value)">Min</button>
+    <button type="button" onClick="maxReducedDamageEnchantment(document.getElementById('protectionValue').options[document.getElementById('protectionValue').selectedIndex].value)">Max</button>
+    <button type="button" onClick="averageReducedDamageEnchantment(document.getElementById('protectionValue').options[document.getElementById('protectionValue').selectedIndex].value)">Average</button></p>
+    
+    <h2 id="damageresistance"></h2> 
+   
+        </article>
+      </div>
+    </div>
+	<!-- InstanceEndEditable -->
+	<footer class="mainFooter">
+		<p><a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc/4.0/88x31.png" /></a><br>
+        Copyright &copy; 2013 <a href="http://1stwebdesigner.com">1stwebdesigner</a>
+        <br />This work is licensed under a <a href="http://creativecommons.org/licenses/by-nc/4.0/" target="_blank" rel="license">Creative Commons Attribution-NonCommercial 4.0 International License</a>.<br>
+        Website created by Eamon Fitzgerald</p>
+</footer>
+
+</body>
+<!-- InstanceEnd --></html>
