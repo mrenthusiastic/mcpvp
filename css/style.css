@@ -295,9 +295,9 @@ a:hover, a:active {
 	
 	.mainHeader nav div {
 		position: absolute;
-		visibility: hidden;
 		margin: 0;
 		padding: 6px;
+		visibility: visible;
 }
 
 	.mainHeader nav div a {
